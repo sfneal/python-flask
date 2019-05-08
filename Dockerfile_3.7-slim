@@ -5,6 +5,7 @@ LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
 # Updating operating system and install nginx
 RUN apt-get update && apt-get install -y nginx
 
+# inspired by: https://bradleyzhou.com/posts/building-slim-uwsgi-docker-image
 # uwsgi, adapted from https://github.com/docker-library/python.git
 # in file python/3.6/slim/Dockerfile
 RUN set -ex \
