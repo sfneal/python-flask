@@ -1,9 +1,9 @@
-# Start from Python 3.7 Alpine image
+# Start from Python 3.7 Slim image
 FROM python:3.7-slim
 LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
 
-# Updating operating system and install nginx
-RUN apt-get update && apt-get install -y nginx
+# Updating operating system
+RUN apt-get update
 
 # inspired by: https://bradleyzhou.com/posts/building-slim-uwsgi-docker-image
 # uwsgi, adapted from https://github.com/docker-library/python.git
