@@ -45,4 +45,4 @@ RUN set -ex \
 RUN pip3 install --upgrade pip
 
 # Install flask & uwsgi dependencies
-RUN pip3 install uwsgi flask flask-RESTful
+RUN pip3 install uwsgi flask
