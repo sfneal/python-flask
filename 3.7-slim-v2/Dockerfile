@@ -33,7 +33,14 @@ RUN set -ex \
     ' \
     && apt-get update && apt-get install -y $buildDeps $deps --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install uwsgi \
+
+    # Update pip
+    && pip3 install --upgrade pip \
+
+    # Install flask & uwsgi dependencies
+    && pip3 install uwsgi flask \
+
+    # Purge install directories
     && apt-get purge -y --auto-remove $buildDeps \
     && find /usr/local -depth \
     \( \
@@ -41,9 +48,3 @@ RUN set -ex \
         -o \
         \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
     \) -exec rm -rf '{}' +
-
-# Update pip
-RUN pip3 install --upgrade pip
-
-# Install flask & uwsgi dependencies
-RUN pip3 install uwsgi flask
