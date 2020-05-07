@@ -32,6 +32,7 @@ RUN set -ex \
     ' \
     && apt-get update \
     && apt-get install -y $buildDeps $deps --no-install-recommends \
+    && pip install uwsgi \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge -y --auto-remove $buildDeps \
     && find /usr/local -depth \
