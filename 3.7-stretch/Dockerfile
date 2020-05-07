@@ -2,12 +2,7 @@
 FROM python:3.7-stretch
 LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
 
-# Updating operating system
-RUN apt-get update
-
-# inspired by: https://bradleyzhou.com/posts/building-slim-uwsgi-docker-image
-# uwsgi, adapted from https://github.com/docker-library/python.git
-# in file python/3.6/slim/Dockerfile
+# Update OS & install dependencies
 RUN set -ex \
     && buildDeps=' \
         gcc \
@@ -28,19 +23,12 @@ RUN set -ex \
         zlib1g-dev \
     ' \
     && deps=' \
-        git \
         libexpat1 \
     ' \
-    && apt-get update && apt-get install -y $buildDeps $deps --no-install-recommends \
+    && apt-get update \
+    && apt-get install -y $buildDeps $deps --no-install-recommends \
+    && pip install uwsgi \
     && rm -rf /var/lib/apt/lists/* \
-
-    # Update pip
-    && pip3 install --upgrade pip \
-
-    # Install flask & uwsgi dependencies
-    && pip3 install uwsgi flask \
-
-    # Purge install directories
     && apt-get purge -y --auto-remove $buildDeps \
     && find /usr/local -depth \
     \( \
@@ -48,3 +36,10 @@ RUN set -ex \
         -o \
         \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
     \) -exec rm -rf '{}' +
+
+# Update pip & install flask & uwsgi dependencies
+RUN pip3 install --upgrade pip \
+	&& pip3 install \
+		flask \
+		flask-RESTful \
+		uwsgi
