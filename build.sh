@@ -11,3 +11,4 @@ docker build -t stephenneal/python-flask:3.7-slim-stretch "${DIR}"/3.7-slim-stre
 docker build -t stephenneal/python-flask:3.7-slim-v2 "${DIR}"/3.7-slim-v2/
 docker build -t stephenneal/python-flask:3.7-stretch "${DIR}"/3.7-stretch/
 docker build -t stephenneal/python-flask:3.8-slim "${DIR}"/3.8-slim/
+docker build -t stephenneal/python-flask:3.9-rc-buster "${DIR}"/3.9-rc-buster/

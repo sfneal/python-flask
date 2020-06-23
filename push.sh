@@ -13,3 +13,4 @@ docker push stephenneal/python-flask:3.7-slim-stretch
 docker push stephenneal/python-flask:3.7-slim-v2
 docker push stephenneal/python-flask:3.7-stretch
 docker push stephenneal/python-flask:3.8-slim
+docker push stephenneal/python-flask:3.9-rc-buster
