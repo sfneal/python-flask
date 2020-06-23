@@ -8,6 +8,7 @@ FROM python:3.9-rc-buster
 LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
 
 # Update OS & install dependencies
+# Update pip & install flask & uwsgi dependencies
 RUN set -ex \
     && buildDeps=' \
         gcc \
@@ -32,7 +33,11 @@ RUN set -ex \
     ' \
     && apt-get update \
     && apt-get install -y $buildDeps $deps --no-install-recommends \
-    && pip install uwsgi \
+    && pip3 install --upgrade pip \
+	&& pip3 install \
+		flask \
+		flask-RESTful \
+		uwsgi \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge -y --auto-remove $buildDeps \
     && find /usr/local -depth \
@@ -41,10 +46,3 @@ RUN set -ex \
         -o \
         \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
     \) -exec rm -rf '{}' +
-
-# Update pip & install flask & uwsgi dependencies
-RUN pip3 install --upgrade pip \
-	&& pip3 install \
-		flask \
-		flask-RESTful \
-		uwsgi
