@@ -4,16 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t stephenneal/python-flask:3.7 /3.7/
-  - docker build -t stephenneal/python-flask:3.7-alpine /3.7-alpine/
-  - docker build -t stephenneal/python-flask:3.7-buster /3.7-buster/
-  - docker build -t stephenneal/python-flask:3.7-slim /3.7-slim/
-  - docker build -t stephenneal/python-flask:3.7-slim-stretch /3.7-slim-stretch/
-  - docker build -t stephenneal/python-flask:3.7-stretch /3.7-stretch/
-  - docker build -t stephenneal/python-flask:3.8-slim /3.8-slim/
-  - docker build -t stephenneal/python-flask:3.9-buster /3.9-buster/
-  - docker build -t stephenneal/python-flask:3.9-slim /3.9-slim/
-  - docker build -t stephenneal/python-flask:3.10-rc-buster /3.10-rc-buster/
+  - sh build.sh
 
 after_script:
   - docker images
