@@ -4,7 +4,7 @@
 
 
 # Start from Python 3.8 Slim image
-FROM python:3.9-rc-buster
+FROM python:3.10-rc-buster
 LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
 
 # Update OS & install dependencies
