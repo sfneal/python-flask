@@ -5,7 +5,7 @@
 
 # Start from Python 3.8 Slim image
 FROM python:3.9-buster
-LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS & install dependencies
 # Update pip & install flask & uwsgi dependencies

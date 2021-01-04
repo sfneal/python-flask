@@ -1,6 +1,6 @@
 # Start from Python 3.7 image
 FROM python:3.7
-LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Updating operating system and install nginx
 RUN apt-get update

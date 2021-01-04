@@ -1,6 +1,6 @@
 # Start from Python 3.7 Alpine image
 FROM python:3.7-alpine
-LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update operating system
 RUN apk update && apk add \

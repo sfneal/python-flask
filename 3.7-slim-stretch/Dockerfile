@@ -1,6 +1,6 @@
 # Start from Python 3.7 Slim image
 FROM python:3.7-slim-stretch
-LABEL maintainer="Stephen Neal <stephen@stephenneal.net>"
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS & install dependencies
 RUN set -ex \
