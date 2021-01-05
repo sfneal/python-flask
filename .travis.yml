@@ -20,6 +20,10 @@ env:
     - TAG=3.9-slim
     - TAG=3.10-rc-buster
 
+jobs:
+  allow_failures:
+    - env: TAG=3.10-rc-buster
+
 before_script:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
