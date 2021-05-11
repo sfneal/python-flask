@@ -9,15 +9,15 @@ env:
     - secure: IZzAqGD5nMvHTN/UeL8cXEMJTCQ9KaLHo9pSX7KU509Rpo9mmwWulvL9Ak9lkErE9R3g6aMKCLSHjy4IeOrtdbBH4M4i0c77sc3zufziI1JEzvJ06MGO7mIJHoksOZi5H+ck3uGEx5t4VV2rNe5Wv8YhR296iP9GmlLnZDZhUNhcxWICDGDODlO5lET8nGAnm1j+n9mgt2+u46OkcUESQzP5y/t8gG6il73RXJ0ZgNeQlvvPzeNMJ6iTIasoa8IAfU4eYSHaQ0bZER7R9w7DBrYCLG7QIQc6p7haHbnTV0T1A6O6dsJQVxa97nYEBaNunWmaBpauaQ4Rcku5zG9w0C69XYvZMha7mX9QyVmiHFCViEMawIvSLK0syRSNT8EtbRl99fpkboliihbeDcai/OJGmCWF4W/stG0QXjde0/xAFh6q3dQB3PemoThG+WOxkmg3ZexKd5UgAk0pbcZOcfkFR4trKs0OWc4X6c5pkVWuSHNTwYF9oatvlyGMx3C8Je6QvV0IU+bjbRuD/XuFigHd1IkAktHumc1C/USLG+IBF0wIsKd2jeOjJA5JepDSildApz1M1DKBueYzOaA+i4ZS8jtAu6MOwgFVeQ+ZR7ECGi5RZOYHvhaxMKNb/4Q30kYx9w9fv1/CWpfJ6xZDud9qirPsATquOHRdmI0SZ1I=
 
   matrix:
-    - TAG=3.7
+    - TAG=3.9-buster
+    - TAG=3.9-slim
+    - TAG=3.8-slim
     - TAG=3.7-alpine
     - TAG=3.7-buster
     - TAG=3.7-slim
     - TAG=3.7-slim-stretch
     - TAG=3.7-stretch
-    - TAG=3.8-slim
-    - TAG=3.9-buster
-    - TAG=3.9-slim
+    - TAG=3.7
     - TAG=3.10-rc-buster
 
 jobs:
