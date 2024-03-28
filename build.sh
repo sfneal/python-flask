@@ -27,4 +27,6 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/python-flask:3.10-buster "${DIR}"/3.10-buster/
     docker build -t stephenneal/python-flask:3.10-slim "${DIR}"/3.10-slim/
     docker build -t stephenneal/python-flask:3.10-rc-buster "${DIR}"/3.10-rc-buster/
+    docker build -t stephenneal/python-flask:3.11-buster "${DIR}"/3.11-buster/
+    docker build -t stephenneal/python-flask:3.11-slim "${DIR}"/3.11-slim/
 fi
