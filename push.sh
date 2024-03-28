@@ -31,4 +31,6 @@ if [ "$TAG" != null ]
     docker push stephenneal/python-flask:3.10-rc-buster
     docker push stephenneal/python-flask:3.11-buster
     docker push stephenneal/python-flask:3.11-slim
+    docker push stephenneal/python-flask:3.12-buster
+    docker push stephenneal/python-flask:3.12-slim
 fi
