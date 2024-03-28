@@ -21,12 +21,14 @@ if [ "$TAG" != null ]
     docker push stephenneal/python-flask:3.7-alpine
     docker push stephenneal/python-flask:3.7-buster
     docker push stephenneal/python-flask:3.7-slim
-    docker push stephenneal/python-flask:3.7-slim-stretch
-    docker push stephenneal/python-flask:3.7-stretch
     docker push stephenneal/python-flask:3.8-slim
     docker push stephenneal/python-flask:3.9-buster
     docker push stephenneal/python-flask:3.9-slim
     docker push stephenneal/python-flask:3.10-buster
     docker push stephenneal/python-flask:3.10-slim
     docker push stephenneal/python-flask:3.10-rc-buster
+    docker push stephenneal/python-flask:3.11-buster
+    docker push stephenneal/python-flask:3.11-slim
+    docker push stephenneal/python-flask:3.12-bullseye
+    docker push stephenneal/python-flask:3.12-slim
 fi
