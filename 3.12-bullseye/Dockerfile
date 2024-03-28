@@ -4,7 +4,7 @@
 
 
 # Start from base Python image
-FROM python:3.12-buster
+FROM python:3.12-bullseye
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS & install dependencies
