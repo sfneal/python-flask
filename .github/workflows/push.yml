@@ -15,6 +15,8 @@ jobs:
                     3.7,
                     3.7-alpine,
                     3.7-buster,
+                    3.7-slim,
+                    3.7-slim-stretch,
                     3.7-stretch,
                     3.8-slim,
                     3.9-buster,
