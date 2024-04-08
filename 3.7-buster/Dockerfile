@@ -37,9 +37,8 @@ RUN set -ex \
         \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
     \) -exec rm -rf '{}' +
 
-# Update pip & install flask & uwsgi dependencies
+# Install Python dependencies
+COPY ./requirements.txt ./requirements.txt
 RUN pip3 install --upgrade pip \
-	&& pip3 install \
-		flask \
-		flask-RESTful \
-		uwsgi
+	&& pip3 install -r ./requirements.txt \
+	&& rm ./requirements.txt
