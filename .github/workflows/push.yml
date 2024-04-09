@@ -12,10 +12,6 @@ jobs:
             matrix:
                 os: [ubuntu-latest]
                 tag: [
-                    3.7,
-                    3.7-alpine,
-                    3.7-buster,
-                    3.7-slim,
                     3.8-slim,
                     3.9-buster,
                     3.9-slim,
