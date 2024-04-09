@@ -17,10 +17,6 @@ if [ "$TAG" != null ]
   else
     sh "${DIR}"/build.sh
 
-    docker push stephenneal/python-flask:3.7
-    docker push stephenneal/python-flask:3.7-alpine
-    docker push stephenneal/python-flask:3.7-buster
-    docker push stephenneal/python-flask:3.7-slim
     docker push stephenneal/python-flask:3.8-slim
     docker push stephenneal/python-flask:3.9-buster
     docker push stephenneal/python-flask:3.9-slim
