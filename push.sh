@@ -18,12 +18,17 @@ if [ "$TAG" != null ]
     sh "${DIR}"/build.sh
 
     docker push stephenneal/python-flask:3.8-slim
+    docker push stephenneal/python-flask:3.8-slim-light
     docker push stephenneal/python-flask:3.9-buster
     docker push stephenneal/python-flask:3.9-slim
+    docker push stephenneal/python-flask:3.9-slim-light
     docker push stephenneal/python-flask:3.10-buster
     docker push stephenneal/python-flask:3.10-slim
+    docker push stephenneal/python-flask:3.10-slim-light
     docker push stephenneal/python-flask:3.11-buster
     docker push stephenneal/python-flask:3.11-slim
+    docker push stephenneal/python-flask:3.11-slim-light
     docker push stephenneal/python-flask:3.12-bullseye
     docker push stephenneal/python-flask:3.12-slim
+    docker push stephenneal/python-flask:3.12-slim-light
 fi
