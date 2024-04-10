@@ -16,12 +16,17 @@ if [ "$TAG" != null ]
   # Build all images
   else
     docker build -t stephenneal/python-flask:3.8-slim "${DIR}"/3.8-slim/
+    docker build -t stephenneal/python-flask:3.8-slim-builder "${DIR}"/3.8-slim-builder/
     docker build -t stephenneal/python-flask:3.9-buster "${DIR}"/3.9-buster/
     docker build -t stephenneal/python-flask:3.9-slim "${DIR}"/3.9-slim/
+    docker build -t stephenneal/python-flask:3.9-slim-builder "${DIR}"/3.9-slim-builder/
     docker build -t stephenneal/python-flask:3.10-buster "${DIR}"/3.10-buster/
     docker build -t stephenneal/python-flask:3.10-slim "${DIR}"/3.10-slim/
+    docker build -t stephenneal/python-flask:3.10-slim-builder "${DIR}"/3.10-slim-builder/
     docker build -t stephenneal/python-flask:3.11-buster "${DIR}"/3.11-buster/
     docker build -t stephenneal/python-flask:3.11-slim "${DIR}"/3.11-slim/
+    docker build -t stephenneal/python-flask:3.11-slim-builder "${DIR}"/3.11-slim-builder/
     docker build -t stephenneal/python-flask:3.12-bullseye "${DIR}"/3.12-bullseye/
     docker build -t stephenneal/python-flask:3.12-slim "${DIR}"/3.12-slim/
+    docker build -t stephenneal/python-flask:3.12-slim-builder "${DIR}"/3.12-slim-builder/
 fi
