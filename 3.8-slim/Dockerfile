@@ -7,6 +7,9 @@
 FROM python:3.8-slim
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
+# Copy Python dependencies list
+COPY ./requirements.txt ./requirements.txt
+
 # Update OS & install dependencies
 RUN set -ex \
     && buildDeps=' \
@@ -32,7 +35,7 @@ RUN set -ex \
     ' \
     && apt-get update \
     && apt-get install -y $buildDeps $deps --no-install-recommends \
-    && pip install uwsgi \
+    && pip install $(grep -C 0 "uWSGI" requirements.txt ) \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge -y --auto-remove $buildDeps \
     && find /usr/local -depth \
@@ -43,7 +46,6 @@ RUN set -ex \
     \) -exec rm -rf '{}' +
 
 # Install Python dependencies
-COPY ./requirements.txt ./requirements.txt
 RUN pip3 install --upgrade pip \
 	&& pip3 install -r ./requirements.txt \
 	&& rm ./requirements.txt
