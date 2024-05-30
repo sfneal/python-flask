@@ -35,7 +35,7 @@ RUN set -ex \
     ' \
     && apt-get update \
     && apt-get install -y $buildDeps $deps --no-install-recommends \
-    && pip install $(grep -C 0 "uWSGI" requirements.txt ) \
+    && pip install $(grep -C 0 "uWSGI" requirements-base.txt ) \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge -y --auto-remove $buildDeps \
     && find /usr/local -depth \
