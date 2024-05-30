@@ -7,7 +7,7 @@
 FROM python:3.9-buster
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
-COPY ./requirements.txt ./requirements.txt
+COPY ["requirements-base.txt", "requirements.txt", "./"]
 
 # Update OS & install dependencies
 # Update pip & install flask & uwsgi dependencies
