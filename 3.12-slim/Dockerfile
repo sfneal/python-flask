@@ -8,7 +8,7 @@ FROM python:3.12-slim
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Copy Python dependencies list
-COPY ./requirements.txt ./requirements.txt
+COPY ["requirements-base.txt", "requirements.txt", "./"]
 
 # Update OS & install dependencies
 RUN set -ex \
@@ -49,4 +49,5 @@ RUN set -ex \
 # Install Python dependencies
 RUN pip3 install --upgrade pip \
 	&& pip3 install -r ./requirements.txt \
-	&& rm ./requirements.txt
+	&& rm ./requirements.txt \
+	&& rm ./requirements-base.txt
