@@ -26,7 +26,8 @@ RUN apt-get update && \
         wget \
         xz-utils \
         zlib1g-dev \
-        libexpat1  \
+        libexpat1 \
+    	python3-six \
         --no-install-recommends
 
 # Install Python dependencies

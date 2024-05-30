@@ -32,6 +32,7 @@ RUN set -ex \
     ' \
     && deps=' \
         libexpat1 \
+    	python3-six \
     ' \
     && apt-get update \
     && apt-get install -y $buildDeps $deps --no-install-recommends \
