@@ -9,4 +9,4 @@ MarkupSafe==2.1.5
 pytz==2024.1
 six==1.16.0
 Werkzeug==3.0.3
-zipp==3.19.0
+zipp==3.19.1
