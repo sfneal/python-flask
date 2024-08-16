@@ -5,7 +5,7 @@
 
 # Start from Python 3.8 Slim image
 FROM python:3.9-buster
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 COPY ["requirements-base.txt", "requirements.txt", "./"]
 

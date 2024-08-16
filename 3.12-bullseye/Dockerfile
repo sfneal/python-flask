@@ -5,7 +5,7 @@
 
 # Start from base Python image
 FROM python:3.12-bullseye
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 COPY ["requirements-base.txt", "requirements.txt", "./"]
 

@@ -5,7 +5,7 @@
 
 # Start from Python 3.8 Slim image
 FROM python:3.10-slim
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Copy Python dependencies list
 COPY ["requirements-base.txt", "requirements.txt", "./"]

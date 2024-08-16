@@ -4,7 +4,7 @@
 
 # Start from base Python image
 FROM python:3.11-buster
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 COPY ["requirements-base.txt", "requirements.txt", "./"]
 
