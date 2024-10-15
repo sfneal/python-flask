@@ -26,6 +26,9 @@ jobs:
                     3.12-bullseye,
                     3.12-slim,
                     3.12-slim-builder,
+                    3.13-bullseye,
+                    3.13-slim,
+                    3.13-slim-builder,
                 ]
 
         name: TAG-${{ matrix.tag }}
