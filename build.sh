@@ -29,4 +29,7 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/python-flask:3.12-bullseye "${DIR}"/3.12-bullseye/
     docker build -t stephenneal/python-flask:3.12-slim "${DIR}"/3.12-slim/
     docker build -t stephenneal/python-flask:3.12-slim-builder "${DIR}"/3.12-slim-builder/
+    docker build -t stephenneal/python-flask:3.13-bullseye "${DIR}"/3.13-bullseye/
+    docker build -t stephenneal/python-flask:3.13-slim "${DIR}"/3.13-slim/
+    docker build -t stephenneal/python-flask:3.13-slim-builder "${DIR}"/3.13-slim-builder/
 fi

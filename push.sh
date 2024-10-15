@@ -31,4 +31,7 @@ if [ "$TAG" != null ]
     docker push stephenneal/python-flask:3.12-bullseye
     docker push stephenneal/python-flask:3.12-slim
     docker push stephenneal/python-flask:3.12-slim-builder
+    docker push stephenneal/python-flask:3.13-bullseye
+    docker push stephenneal/python-flask:3.13-slim
+    docker push stephenneal/python-flask:3.13-slim-builder
 fi
