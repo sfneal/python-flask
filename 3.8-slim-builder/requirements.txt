@@ -1,6 +1,7 @@
 -r requirements-base.txt
 aniso8601==9.0.1
-blinker==1.8.2
+blinker==1.8.2; python_version<="3.8"
+blinker==1.9.0; python_version>="3.9"
 click==8.1.7
 importlib_metadata==8.5.0
 itsdangerous==2.2.0
