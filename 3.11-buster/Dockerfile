@@ -21,7 +21,7 @@ RUN set -ex \
         libreadline-dev \
         libsqlite3-dev \
         libssl-dev \
-        libpcre3-dev \
+        # libpcre3-dev \
         make \
         tcl-dev \
         tk-dev \
