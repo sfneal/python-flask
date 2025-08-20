@@ -7,6 +7,9 @@
 FROM python:3.10-buster
 LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
+# Update source list
+RUN echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list
+
 COPY ["requirements-base.txt", "requirements.txt", "./"]
 
 # Update OS & install dependencies
@@ -22,7 +25,7 @@ RUN set -ex \
         libreadline-dev \
         libsqlite3-dev \
         libssl-dev \
-        libpcre3-dev \
+        # libpcre3-dev \
         make \
         tcl-dev \
         tk-dev \
