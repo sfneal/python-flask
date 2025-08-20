@@ -6,6 +6,9 @@
 FROM python:3.11-buster
 LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
+# Update source list
+RUN echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list
+
 COPY ["requirements-base.txt", "requirements.txt", "./"]
 
 # Update OS & install dependencies
